@@ -26,18 +26,15 @@ public class WorkerResources {
 	@Autowired
 	private Environment env;
 	
-	@Value("${test.config}")
-	private String testConfig;
-	
 	@Autowired
 	private WorkerRepository repository;
 
-	@GetMapping("configs")
-	public ResponseEntity<Void> getConfigs(){
-		logger.info("Config=" + testConfig);
-		
-		return ResponseEntity.noContent().build();
-	}
+//	@GetMapping("configs")
+//	public ResponseEntity<Void> getConfigs(){
+//		logger.info("Config=" + testConfig);
+//		
+//		return ResponseEntity.noContent().build();
+//	}
 	
 	@GetMapping
 	public ResponseEntity<List<Worker>> findAll(){
